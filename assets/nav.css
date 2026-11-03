@@ -1,0 +1,55 @@
+<style>:root {--ink:#0b0b0b;--grey:#909090;--paper:#fff;--blue:#4964d8;--gutter:2.5vw}
+.header {position:fixed;top:16px;left:16px;right:16px;z-index:40;display:flex;justify-content:space-between;gap:12px;pointer-events:none;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.header.hidden {transform:translateY(-100px)}
+.header:focus-within {transform:translateY(0)}
+.header>* {pointer-events:auto}
+.nav-island {height:48px;padding:0 18px;display:flex;align-items:center;gap:30px;background:#efefefec;backdrop-filter:blur(20px);border-radius:3px}
+.brand {font-weight:800;font-size:27px;letter-spacing:-1.7px;display:flex;line-height:1}
+.brand span {font-size:9px;letter-spacing:0;margin-left:3px;margin-top:1px}
+.nav-island nav {display:flex;align-items:center;gap:27px;font-size:14px}
+.nav-island nav a {padding:17px 0;position:relative}
+.nav-island nav a:after {content:'';position:absolute;height:1px;background:currentColor;bottom:11px;left:0;width:100%;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-island nav a:hover:after {transform:scaleX(1)}
+.nav-island nav a>span {margin-left:5px}
+.header-right {display:flex;gap:9px}
+#menu-toggle,#mobile-menu {display:none}
+.nav-island {gap:23px}
+.nav-island nav {gap:20px}
+:root {--gutter:5vw}
+.header {top:12px;left:12px;right:12px}
+.nav-island {height:44px;padding:0 14px}
+.brand {font-size:26px}
+.nav-island nav {display:none}
+#menu-toggle {display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;background:#efefefec;backdrop-filter:blur(16px);border-radius:3px;padding:12px}
+#menu-toggle span {height:1px;width:20px;background:#111;transition:transform .2s}
+#menu-toggle[aria-expanded=true] span:first-child {transform:translateY(3.5px) rotate(45deg)}
+#menu-toggle[aria-expanded=true] span:last-child {transform:translateY(-3.5px) rotate(-45deg)}
+/* AERA launch: dark materials, generous typography, useful spatial previews. */
+:root {--ink:#f0f1f4;--grey:#9c9da7;--paper:#08090c;--blue:#5a68c9;--line:#ffffff21;color-scheme:dark}
+.header {top:18px}
+.nav-island {background:#18191cde;border:1px solid #ffffff15;color:#d3d4dc}
+.nav-island {border-radius:30px}
+.header-right {align-items:center}
+.brand {color:#fff}
+#menu-toggle {background:#191c22;color:#d6deec;border:1px solid #fff1;border-radius:50%}
+.header {top:12px}
+.nav-island {border:1px solid #fff1}
+#menu-toggle span {background:#c3ccdc}
+.nav-island {backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.buy-now-button {height:48px;min-width:128px;padding:0 25px;display:inline-flex;align-items:center;justify-content:center;border-radius:26px;background:transparent;color:#f4f5f8;font-size:14px;font-weight:500;letter-spacing:-.015em;white-space:nowrap;line-height:1}
+#buy-now-root .buy-now-metal {background:#16171b;box-shadow:0 4px 20px #0005;transition:background .65s ease,box-shadow .65s ease}
+#buy-now-root .buy-now-metal:before {background:radial-gradient(ellipse at 30% 0%,#b5deff30,transparent 72%);opacity:0;transition:opacity .65s ease}
+#buy-now-root .buy-now-metal .metal-fx-canvas,#buy-now-root .buy-now-metal .metal-fx-glow-svg {filter:sepia(0) hue-rotate(0deg) saturate(1) brightness(1);transition:filter .65s ease}
+#buy-now-root .buy-now-button {transition:color .65s ease}
+#buy-now-root .buy-now-metal:is(:hover,:has(:focus-visible)) {background:#172d42;box-shadow:0 4px 20px #0005,0 0 24px #80beed24}
+#buy-now-root .buy-now-metal:is(:hover,:has(:focus-visible)):before {opacity:1}
+#buy-now-root .buy-now-metal:is(:hover,:has(:focus-visible)) .metal-fx-canvas,#buy-now-root .buy-now-metal:is(:hover,:has(:focus-visible)) .metal-fx-glow-svg {filter:sepia(.7) hue-rotate(158deg) saturate(1.7) brightness(1.08)}
+#buy-now-root .buy-now-metal:is(:hover,:has(:focus-visible)) .buy-now-button {color:#e5f5ff}
+#buy-now-root .buy-now-metal:has(:focus-visible) {outline:2px solid #c9d7f3;outline-offset:5px}
+.buy-now-fallback {border:1px solid #b6bdce70;background:#16171b}
+.buy-now-button {height:44px;min-width:110px;padding:0 21px;font-size:13px}
+/* Hide the whole navigation from the first paint, including its metal halo.
+It enters only after the last camera beat; replay hides it immediately. */
+.header {opacity:1;translate:0 0;transition:opacity .75s ease,translate .85s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.2,.7,.2,1)}
+.header[data-intro="pending"] {opacity:0;visibility:hidden;translate:0 -12px;transition:none;pointer-events:none}
+.header,#buy-now-root .buy-now-metal,#buy-now-root .buy-now-metal:before,#buy-now-root .buy-now-metal .metal-fx-canvas,#buy-now-root .buy-now-metal .metal-fx-glow-svg,#buy-now-root .buy-now-button {transition:none}

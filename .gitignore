@@ -1,0 +1,10 @@
+# Logs
+*.log
+
+# Caches
+__pycache__/
+*.pyc
+
+# Arquivos temporários do SO
+.DS_Store
+Thumbs.db

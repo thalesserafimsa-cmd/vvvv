@@ -1,0 +1,22 @@
+{
+  "profile": {
+    "name": "Thales",
+    "age": 16,
+    "title": "Estudante FECAP • IA, Games, Metal & Ciência Espacial",
+    "fecapCourse": "Técnico em Inteligência Artificial",
+    "careerGoal": "Cientista de Dados",
+    "obafog": "Participante e finalista da OBAFOG 2025 (Mostra Brasileira de Foguetes)",
+    "music": "Guitarrista e fã ferrenho de Heavy Metal",
+    "games": [
+      "Brawl Stars",
+      "Clash of Clans"
+    ],
+    "relationship": "2 anos com a Lívia",
+    "favoriteFood": [
+      "Lasanha",
+      "Sorvete"
+    ],
+    "roots": "Origens Nordestinas e muito amor no coração",
+    "photo": "assets/img/thales_rocker.jpg"
+  }
+}
